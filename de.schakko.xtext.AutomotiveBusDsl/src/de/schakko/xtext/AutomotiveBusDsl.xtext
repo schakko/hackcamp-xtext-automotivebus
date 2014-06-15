@@ -1,0 +1,51 @@
+grammar de.schakko.xtext.AutomotiveBusDsl with org.eclipse.xtext.common.Terminals
+
+generate automotiveBusDsl "http://www.schakko.de/xtext/AutomotiveBusDsl"
+
+Model:
+	'Busses' busses+=Bussystem (',' busses+=Bussystem)+
+	'Messages' '{'
+		messages+=MessageType+
+	'}'
+	
+	'Components' '{'
+		components+=Component+
+	'}'
+	
+	'Vehicles' '{'
+		vehicles+=VehicleType+
+	'}'
+;
+
+VehicleType:
+	name=ID 'has components' '{'
+		components+=[Component]+
+	'}'
+;
+
+Bussystem:
+	name=ID
+;	
+
+Component:	
+	name=ID ('sends messages' '{'
+		messages+=(MessageInstance)+
+	'}')?
+;
+
+MessageType:
+	name=ID 'has fields' '{'
+	fields+=MessageFieldType+
+	'}'
+;
+
+MessageInstance:
+	'of type' message=[MessageType]('('(params+=STRING+)')')? 'over' bus=[Bussystem] (('as broadcast')|('to' target=[Component]))
+;
+
+MessageFieldType:
+	('int' | 'char' | 'char[]') name=ID (isRequired?='is required')?
+;
+
+terminal CHAR: 'a'..'z'|'A'..'Z'|'0'..'9';
+

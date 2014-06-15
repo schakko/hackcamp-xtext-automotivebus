@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.schakko.xtext.AutomotiveBusDsl/src-gen" editDirectory="/de.schakko.xtext.AutomotiveBusDsl.edit/src"
+    editorDirectory="/de.schakko.xtext.AutomotiveBusDsl.editor/src" modelPluginID="de.schakko.xtext.AutomotiveBusDsl"
+    forceOverwrite="true" modelName="AutomotiveBusDsl" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="de.schakko.xtext.AutomotiveBusDsl.edit"
+    editorPluginID="de.schakko.xtext.AutomotiveBusDsl.editor" runtimeVersion="2.10">
+  <genPackages prefix="AutomotiveBusDsl" basePackage="de.schakko.xtext" disposableProviderFactory="true"
+      fileExtensions="bus" ecorePackage="AutomotiveBusDsl.ecore#/">
+    <genClasses ecoreClass="AutomotiveBusDsl.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomotiveBusDsl.ecore#//Model/busses"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomotiveBusDsl.ecore#//Model/messages"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomotiveBusDsl.ecore#//Model/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomotiveBusDsl.ecore#//Model/vehicles"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomotiveBusDsl.ecore#//VehicleType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomotiveBusDsl.ecore#//VehicleType/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AutomotiveBusDsl.ecore#//VehicleType/components"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomotiveBusDsl.ecore#//Bussystem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomotiveBusDsl.ecore#//Bussystem/name"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomotiveBusDsl.ecore#//Component">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomotiveBusDsl.ecore#//Component/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomotiveBusDsl.ecore#//Component/messages"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomotiveBusDsl.ecore#//MessageType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomotiveBusDsl.ecore#//MessageType/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AutomotiveBusDsl.ecore#//MessageType/fields"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomotiveBusDsl.ecore#//MessageInstance">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AutomotiveBusDsl.ecore#//MessageInstance/message"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomotiveBusDsl.ecore#//MessageInstance/params"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AutomotiveBusDsl.ecore#//MessageInstance/bus"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AutomotiveBusDsl.ecore#//MessageInstance/target"/>
+    </genClasses>
+    <genClasses ecoreClass="AutomotiveBusDsl.ecore#//MessageFieldType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomotiveBusDsl.ecore#//MessageFieldType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AutomotiveBusDsl.ecore#//MessageFieldType/isRequired"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: de.schakko.xtext.AutomotiveBusDsl.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: de.schakko.xtext.AutomotiveBusDsl.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: de.schakko.xtext.AutomotiveBusDsl;visibility:=reexport,
+ org.eclipse.xtext.ui,
+ org.eclipse.ui.editors;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.ui,
+ org.eclipse.xtext.builder,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types.ui,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.compare
+Import-Package: org.apache.log4j,
+ org.eclipse.xtext.xbase.lib
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: de.schakko.xtext.ui.quickfix,
+ de.schakko.xtext.ui.contentassist,
+ de.schakko.xtext.ui.contentassist.antlr,
+ de.schakko.xtext.ui.internal
+Bundle-Activator: de.schakko.xtext.ui.internal.AutomotiveBusDslActivator

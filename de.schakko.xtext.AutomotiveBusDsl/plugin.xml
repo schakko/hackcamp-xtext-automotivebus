@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://www.schakko.de/xtext/AutomotiveBusDsl" 
+       class = "de.schakko.xtext.automotiveBusDsl.AutomotiveBusDslPackage"
+       genModel = "model/generated/AutomotiveBusDsl.genmodel" /> 
+	
+  </extension>
+
+
+
+</plugin>
